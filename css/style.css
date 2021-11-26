@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin:0;
+  font-size: 16px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+
+:root{
+  /*Primary*/
+
+  --desaturatedRed: hsl(0, 36%, 70%);
+  --softRed: hsl(0, 93%, 68%);
+
+  /*Neutral*/
+
+  --darkGrayishRed: hsl(0, 6%, 24%);
+
+  /*Gradients*/
+
+  - Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+  - Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/bg-pattern-desktop.svg");
+}
+
+span{
+  color: var(--desaturatedRed);
+  font-size: 80px;
+  text-transform: uppercase;
+}
+
+.main_card{
+  display: flex;
+  flex-direction: row;
+  max-width: 1450px;
+}
+
+.left_card{
+  position: relative;
+  flex: 70%;
+  flex-direction: column;
+  padding: 5%;
+  align-items: center;
+}
+
+.right_card{
+  position: relative;
+  flex:30%;
+}
+
+
+.logo_img{
+  width: 100%;
+  margin-bottom: 10%;
+}
+
+.main_text{
+  font-size: 80px;
+  text-transform: uppercase;
+  letter-spacing: 25px;
+  line-height: 80px;
+}
+
+.second_text{
+  margin-top: 10%;
+  margin-right: 20%;
+  line-height: 30px;
+  color: var(--desaturatedRed);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width:750px){
+  .main_card{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo_img{
+    order: 1;
+  }
+  .left_card{
+    order: 3;
+    margin: auto;
+  }
+  .right_card{
+    order: 2;
+  }
+}
